@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#F6F8FC">
 <meta name="color-scheme" content="light">
 <title>OSTIC — Havolalar</title>
-<meta name="description" content="OSTIC — muhandislik yechimlari: iqlim, yoritish, elektrotexnika va kirish nazorati, pol qoplamalari, yong‘in xavfsizligi. Instagram, Telegram, sayt, shourum narxlari va aloqa.">
+<meta name="description" content="OSTIC — muhandislik yechimlari: iqlim, yoritish, elektrotexnika va kirish nazorati, yong‘in xavfsizligi. Instagram, Telegram, sayt, shourum narxlari va aloqa.">
 <meta property="og:title" content="OSTIC — Havolalar">
 <meta property="og:description" content="Muhandislik yechimlari: iqlim, yoritish, elektrotexnika, kirish nazorati, yong‘in xavfsizligi. Katalog va aloqa.">
 <meta property="og:type" content="website">
@@ -191,20 +191,15 @@
   .plates { margin-top: auto; padding-top: 9px; display: flex; gap: 5px; flex-wrap: wrap; }
   .plate { width: 68px; height: 26px; padding: 3px 5px; border-radius: 7px; background: #fff; border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; }
   .plate img { width: 100%; height: 100%; object-fit: contain; }
-  .tagp { min-height: 26px; padding: 5px 9px; line-height: 1.25; border-radius: 7px; display: inline-flex; align-items: center; background: var(--tint); border: 1px solid var(--line); font-size: 11px; font-weight: 700; color: var(--navy-2); }
-  .dir.more a { position: relative; overflow: hidden; height: 100%; min-height: 150px; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; padding: 14px; border-radius: var(--r); background: var(--navy); color: #fff; box-shadow: var(--sh); }
+  .dir.more { grid-column: 1 / -1; }
+  .dir.more a { position: relative; overflow: hidden; height: 100%; min-height: 104px; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; padding: 14px; border-radius: var(--r); background: var(--navy); color: #fff; box-shadow: var(--sh); }
   .dir.more a::before { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 90% at 100% 0%, rgba(11, 98, 222, .6), transparent 60%); }
   .dir.more a > * { position: relative; }
   .more-k { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--blue-soft); }
-  .more-t { font-size: 17px; line-height: 1.18; font-weight: 800; letter-spacing: -.01em; max-width: 12ch; }
+  .more-t { font-size: 17px; line-height: 1.18; font-weight: 800; letter-spacing: -.01em; max-width: 22ch; }
   .dir.more .go { position: absolute; top: 14px; right: 14px; background: var(--orange); border-color: transparent; color: var(--navy); }
 
   /* ---------- Mijozlar ---------- */
-  .clients { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 12px; }
-  .clients li { list-style: none; aspect-ratio: 2.6 / 1; border-radius: 12px; border: 1px solid var(--line); background: #fff; overflow: hidden; display: grid; place-items: center; }
-  .clients li { padding: 4px 8px; }
-  .clients img { width: 100%; height: 100%; object-fit: contain; }
-  .clients ul { display: contents; }
 
   .foot { margin-top: 10px; display: flex; justify-content: center; align-items: center; gap: 10px; font-size: 12.5px; color: var(--faint); }
   .foot a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
@@ -254,7 +249,6 @@
   @media (max-width: 359px) {
     h1 { font-size: 34px; }
     .plate { width: 58px; } .db { padding: 10px; } .an { font-size: 13.5px; }
-    .clients { grid-template-columns: repeat(2, 1fr); }
   }
   @media (min-width: 600px) {
     .wrap { padding-top: 40px; padding-bottom: 40px; }
@@ -277,7 +271,7 @@
       </div>
       <p class="kicker">Eight Doors · <span data-i18n="cityShort">Toshkent</span></p>
       <h1><span data-i18n="h1a">Muhandislik</span> <em data-i18n="h1b">yechimlari</em></h1>
-      <p class="lede" data-i18n="lede">Iqlim, yoritish, elektrotexnika, kirish nazorati, pol qoplamalari va yong‘in xavfsizligi — loyihadan obyekt topshirilguncha.</p>
+      <p class="lede" data-i18n="lede">Iqlim, yoritish, elektrotexnika, kirish nazorati va yong‘in xavfsizligi — loyihadan obyekt topshirilguncha.</p>
       <div class="chips">
         <span class="chip status" id="status"><span class="dot" aria-hidden="true"></span><span id="status-txt" data-i18n="hoursShort">Du–Sha 9:00–18:00</span></span>
         <span class="chip"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2s-6.8-5.9-6.8-11.6a6.8 6.8 0 0 1 13.6 0c0 5.7-6.8 11.6-6.8 11.6Z"/><circle cx="12" cy="9.6" r="2.5"/></svg><span data-i18n="city">Toshkent, O‘zbekiston</span></span>
@@ -384,16 +378,11 @@
           <span class="plates"><span class="plate"><img src="assets/logos/simon.webp" width="390" height="150" alt="SIMON" loading="lazy" decoding="async"></span><span class="plate"><img src="assets/logos/salto.webp" width="390" height="150" alt="SALTO" loading="lazy" decoding="async"></span></span></span>
       </li>
       <li class="card dir rv" style="--d:12">
-        <span class="ph tex"><img src="assets/products/floor.webp" width="360" height="360" alt="" loading="lazy" decoding="async"><span class="n">04</span></span>
-        <span class="db"><span class="an" data-i18n="a4">Pol qoplamalari</span><span class="ab" data-i18n="a4s">Vinil, SPC, laminat</span>
-          <span class="plates"><span class="tagp" data-i18n="a4t">Tijorat binolari uchun</span></span></span>
-      </li>
-      <li class="card dir rv" style="--d:13">
-        <span class="ph"><img src="assets/products/fire.webp" width="360" height="360" alt="" loading="lazy" decoding="async"><span class="n">05</span></span>
+        <span class="ph"><img src="assets/products/fire.webp" width="360" height="360" alt="" loading="lazy" decoding="async"><span class="n">04</span></span>
         <span class="db"><span class="an" data-i18n="a5">Yong‘in xavfsizligi</span><span class="ab" data-i18n="a5s">Sprinkler tizimlari</span>
           <span class="plates"><span class="plate"><img src="assets/logos/viking.webp" width="390" height="150" alt="VIKING" loading="lazy" decoding="async"></span></span></span>
       </li>
-      <li class="dir more rv" style="--d:14">
+      <li class="dir more rv" style="--d:13">
         <a href="#shourum">
           <span class="more-k" data-i18n="moreK">Shourum</span>
           <span class="more-t" data-i18n="moreT">Mavjud tovarlar va narxlar</span>
@@ -402,18 +391,6 @@
       </li>
     </ul>
 
-    <!-- ===== Mijozlar ===== -->
-    <div class="sec rv" style="--d:10"><h2 id="h-clients" data-i18n="clients">Bizga ishonishadi</h2></div>
-    <div class="card rv" style="--d:10">
-      <ul class="clients" aria-labelledby="h-clients">
-        <li><img src="assets/logos/radisson.webp" width="390" height="150" alt="Radisson Hotels" loading="lazy" decoding="async"></li>
-        <li><img src="assets/logos/azimut.webp" width="390" height="150" alt="Azimut Hotels" loading="lazy" decoding="async"></li>
-        <li><img src="assets/logos/korzinka.webp" width="390" height="150" alt="Korzinka" loading="lazy" decoding="async"></li>
-        <li><img src="assets/logos/yutong.webp" width="390" height="150" alt="Yutong" loading="lazy" decoding="async"></li>
-        <li><img src="assets/logos/trest12.webp" width="390" height="150" alt="Trest 12" loading="lazy" decoding="async"></li>
-        <li><img src="assets/logos/interra.webp" width="390" height="150" alt="Interra" loading="lazy" decoding="async"></li>
-      </ul>
-    </div>
   </main>
 
   <footer class="foot">© 2026 OSTIC<span class="sep" aria-hidden="true"></span><a href="https://ostic.uz" target="_blank" rel="noopener">ostic.uz</a></footer>
@@ -445,7 +422,7 @@
       uz: {
         title: "OSTIC — Havolalar", cityShort: "Toshkent", city: "Toshkent, O‘zbekiston",
         h1a: "Muhandislik", h1b: "yechimlari",
-        lede: "Iqlim, yoritish, elektrotexnika, kirish nazorati, pol qoplamalari va yong‘in xavfsizligi — loyihadan obyekt topshirilguncha.",
+        lede: "Iqlim, yoritish, elektrotexnika, kirish nazorati va yong‘in xavfsizligi — loyihadan obyekt topshirilguncha.",
         hoursShort: "Du–Sha 9:00–18:00", links: "Havolalar", site: "Rasmiy sayt",
         contact: "Aloqa", call: "Qo‘ng‘iroq qilish", call2: "Qo‘shimcha raqam",
         save: "Kontaktni saqlash", saveSub: "Telefon kitobiga", share: "Ulashish", shareSub: "Havolani yuborish",
@@ -455,26 +432,24 @@
         a1: "Iqlim tizimlari", a1s: "Chillerlar, VRF, fankoyllar",
         a2: "Yoritish", a2s: "Me’moriy va texnik yoritish",
         a3: "Elektrotexnika va kirish nazorati", a3s: "Rozetkalar, aqlli uy, elektron qulflar",
-        a4: "Pol qoplamalari", a4s: "Vinil, SPC, laminat",
-        a5: "Yong‘in xavfsizligi", a5s: "Sprinkler tizimlari", a4t: "Tijorat binolari uchun",
+        a5: "Yong‘in xavfsizligi", a5s: "Sprinkler tizimlari",
         moreK: "Shourum", moreT: "Mavjud tovarlar va narxlar",
         shTitle: "Shourumda mavjud", shLed: "LED yoritish", shLedMeta: "30 artikul · 16 bet",
         shTica: "Fankoyllar", shTicaMeta: "9 pozitsiya · 8 bet",
         shNote: "Narxlar QQS bilan, 12.11.2026 holatiga. Namunalarni shourumda ko‘rish mumkin.",
         dockCall: "Qo‘ng‘iroq", qrT: "Telefonda oching", qrD: "Kamera bilan skanerlang: havolalar, katalog va aloqa doim yoningizda.",
-        clients: "Bizga ishonishadi",
         open: "Hozir ochiq · 18:00 gacha", closedToday: "Yopiq · bugun 9:00 da ochiladi",
         closedTomorrow: "Yopiq · ertaga 9:00 da ochiladi", closedMonday: "Yopiq · dushanba 9:00 da ochiladi",
         copyAria: "Manzildan nusxa olish", copiedAria: "Nusxa olindi", copyTitle: "Nusxa olish",
         tCopied: "Manzildan nusxa olindi", tCopyFail: "Nusxa olib bo‘lmadi", tVcf: "Kontakt fayli yuklandi",
         tVcfFail: "Kontaktni saqlab bo‘lmadi", tLink: "Havoladan nusxa olindi", shareText: "OSTIC — muhandislik yechimlari",
-        vNote: "Muhandislik yechimlari: iqlim (TICA), yoritish (LEDVANCE / OSRAM), elektrotexnika va kirish nazorati (SIMON, SALTO), pol qoplamalari, yong‘in xavfsizligi (VIKING). Ish vaqti: Du–Sha 9:00–18:00.",
+        vNote: "Muhandislik yechimlari: iqlim (TICA), yoritish (LEDVANCE / OSRAM), elektrotexnika va kirish nazorati (SIMON, SALTO), yong‘in xavfsizligi (VIKING). Ish vaqti: Du–Sha 9:00–18:00.",
         vDistrict: "Olmazor tumani", vStreet: "Nurafshon ko‘chasi, 51", vCity: "Toshkent", vCountry: "O‘zbekiston"
       },
       ru: {
         title: "OSTIC — Ссылки", cityShort: "Ташкент", city: "Ташкент, Узбекистан",
         h1a: "Инженерные", h1b: "решения",
-        lede: "Климат, освещение, электротехника, контроль доступа, напольные покрытия и пожарная безопасность — от проекта до сдачи объекта.",
+        lede: "Климат, освещение, электротехника, контроль доступа и пожарная безопасность — от проекта до сдачи объекта.",
         hoursShort: "Пн–Сб 9:00–18:00", links: "Ссылки", site: "Официальный сайт",
         contact: "Контакты", call: "Позвонить", call2: "Дополнительный номер",
         save: "Сохранить контакт", saveSub: "В телефонную книгу", share: "Поделиться", shareSub: "Отправить ссылку",
@@ -484,20 +459,18 @@
         a1: "Климатические системы", a1s: "Чиллеры, VRF, фанкойлы",
         a2: "Освещение", a2s: "Архитектурное и техническое освещение",
         a3: "Электротехника и контроль доступа", a3s: "Розетки, умный дом, электронные замки",
-        a4: "Напольные покрытия", a4s: "Винил, SPC, ламинат",
-        a5: "Пожарная безопасность", a5s: "Спринклерные системы", a4t: "Для коммерческих объектов",
+        a5: "Пожарная безопасность", a5s: "Спринклерные системы",
         moreK: "Шоурум", moreT: "Наличие и цены",
         shTitle: "В наличии в шоуруме", shLed: "LED-освещение", shLedMeta: "30 артикулов · 16 стр.",
         shTica: "Фанкойлы", shTicaMeta: "9 позиций · 8 стр.",
         shNote: "Цены с НДС, на 12.11.2026. Образцы можно посмотреть в шоуруме.",
         dockCall: "Позвонить", qrT: "Откройте на телефоне", qrD: "Наведите камеру: ссылки, каталог и контакты всегда под рукой.",
-        clients: "Нам доверяют",
         open: "Сейчас открыто · до 18:00", closedToday: "Закрыто · откроется сегодня в 9:00",
         closedTomorrow: "Закрыто · откроется завтра в 9:00", closedMonday: "Закрыто · откроется в понедельник в 9:00",
         copyAria: "Скопировать адрес", copiedAria: "Скопировано", copyTitle: "Скопировать",
         tCopied: "Адрес скопирован", tCopyFail: "Не удалось скопировать", tVcf: "Файл контакта загружен",
         tVcfFail: "Не удалось сохранить контакт", tLink: "Ссылка скопирована", shareText: "OSTIC — инженерные решения",
-        vNote: "Инженерные решения: климат (TICA), освещение (LEDVANCE / OSRAM), электротехника и контроль доступа (SIMON, SALTO), напольные покрытия, пожарная безопасность (VIKING). Время работы: Пн–Сб 9:00–18:00.",
+        vNote: "Инженерные решения: климат (TICA), освещение (LEDVANCE / OSRAM), электротехника и контроль доступа (SIMON, SALTO), пожарная безопасность (VIKING). Время работы: Пн–Сб 9:00–18:00.",
         vDistrict: "Алмазарский район", vStreet: "ул. Нурафшон, 51", vCity: "Ташкент", vCountry: "Узбекистан"
       }
     };
